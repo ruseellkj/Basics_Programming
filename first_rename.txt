@@ -1,0 +1,58 @@
+GIT | GITHUB v1.0
+
+First git came then github,bitbucket,gitlab etc
+
+-> git is version control system, it is used to track the different changes in a file/folder etc
+-> github came which is a sw application that is used to manage the git repositories
+
+-> even without github, bitbucket, gitlab etc we can manage our git repositories by having our own server
+
+when we download and initialize a folder as a git folder then a .git repo is created which contains all the versions of the files in that folder. 
+
+STEPS :
+
+1. git status (fatal erroe milega agar koi git repo nai h, obv track kar hi nai payenge)
+2. git init
+3. git status (ab track kar sakte h par red color meh hoga)
+4. working dir -> staging wale area meh files lao
+	4.1 git add --a (--a means all the files)
+5. git status (ab files staged area meh h par commit/snapshot nai liya h, green color meh files hogi)
+6. git commit -m "your-message"
+7. git status (working tree clean hoga, mtlb snapshoit le liya h humne)
+8. Ab continue the process
+9. to delete the entire .git folder write (rm -rf .git)
+10. to clone a git repo from github
+	10.1 git clone repo-link
+	10.2 if you want to change the cloned repo name then write
+		10.2.1 git clone repo-link your-specified-name
+11. file status life cycle
+	11.1 git init -> (untracked files)
+	11.2 git add --a -> (unmodified or staged files)
+	11.3 now if we update or modify some files then that particular files goes into modified but in the staged area or unmodified (it 	has prev files only)
+	11.4 now if we do git add --a then the staging area contains the staged files 
+12. git diff is used to see the changes made in working dir vs staging area (that is pwd and stage)
+13. to delete a file write this 
+	13.1 git rm <file-name>
+14. to rename a file write this 
+	14.1 git mv <file-name> <new-file-name>
+15. agar hum koi file ko pehle se track kar rhe hai then usko ignore karna chate h woh hoga nai, mtlb agar gitignore meh daal bhi diya and fir uss file ko edit kiya and run kiya git status (toh locha hoga)
+iske liye pehle tracked to untracked karna padega
+to untrack a file write this
+	15.1 git rm --cached <file-name>
+16. ~GIT LOG COMMANDS~
+	16.1 git log
+	16.2 git log -p
+	16.3 git log -p -n (where n = 1,2,3,4... it is no of commits)
+	16.4 git log --stat
+	16.5 git log --pretty=oneline
+	16.6 git log --pretty=short
+	16.7 git log --since=2.days/weeks/months/years
+17. to unstage a file write 
+	17.1 git restore --staged <file-name>
+18. agar file ka content last commit wala lana h wapas then write
+	18.1 git checkout -- <file-name>
+19. agar saari files wapas laani h (last commit wali) then write this 
+	19.1 git checkout -f
+20. 
+`
+
